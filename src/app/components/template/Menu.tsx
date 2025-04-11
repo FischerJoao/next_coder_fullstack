@@ -1,22 +1,14 @@
-import { IconHome } from "@tabler/icons-react";
-import Link from "next/link";
+import { IconHome, IconUser } from "@tabler/icons-react"
+import MenuItem from "./MenuItem"
 
-function MenuItem(){
-    return(
-        <Link href="/" className="flex gap-2 px-4 py-2 hover:bg-black">
-            <IconHome/>
-            <span>Início</span>
-        </Link>
-    )
-}
 
-export default function Menu(props: MenuProps) {
+export default function Menu() {
     return (
    <aside className="w-72 bg-zinc-900 h-screen p-6">
     <nav className="flex flex-col gap-1">
-        <MenuItem/>
-        <MenuItem/>
-        <MenuItem/>
+    <MenuItem icon={IconHome} text="Início" url="usuarios"/>
+    <MenuItem icon={IconUser} text="Cadastro Usuário" url="/"/>
+    
 
     </nav>
    </aside>
